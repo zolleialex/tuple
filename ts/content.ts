@@ -1,22 +1,22 @@
-﻿import * as http from "http";
+﻿let mytuple = [10, "Hello", "World", "typeScript"]; 
+console.log("Items before push " + mytuple.length);   // visszaadja a tuple méretét 
 
-export default class Content {
+mytuple.push(12);                                   // hozzáad egy értéket a tuplehoz
+console.log("Items after push " + mytuple.length);
+console.log("Items before pop " + mytuple.length);
+console.log(mytuple.pop() + " popped from the tuple"); // kiszedi és visszadja az utolsó elemet
+console.log("Items after pop " + mytuple.length);
+// Tuplik frissitése
+let mytuple2 = [10, "Hello", "World", "typeScript"]; // tuple létrehozása
+console.log("Tuple value at index 0 " + mytuple[0]);
 
-    public content(req: http.IncomingMessage, res: http.ServerResponse): void {
-        res.write("<a href='https://github.com/zolleialex/tuple' target='_blank'>" +
-            "https://github.com/zolleialex/tuple</a><br>");
-        let tupleType: [string, number];
+// tuple 0. elemének megváltoztatása
+mytuple[0] = 121;
+console.log("Tuple value at index 0 changed to   " + mytuple[0]);
+// Üres tuple
+let tup = [] ;
+tup[0] = 12 ;
+tup[1] = 23 ;
 
-        tupleType = ['hey', 13];
-        // tupleType = [5, 'hey']; // Error - '[number, string]' is not assignable to '[string, number]'
-        // tupleType = ['hey', 'tuple']; // Error - '[string, string]' is not assignable to '[string, number]'
-
-        tupleType[3] = 54; // this works well because union type string | number is used for indices outside of known ones
-        tupleType[4] = 'test'; // works well because it can be string or number, union type
-        // tupleType[5] = true; // Error - Type 'true' is not assignable to type 'string | number'
-
-        console.log(tupleType);
-
-        res.end();
-    }
-}
+console.log(tup[0]) ;
+console.log(tup[1]);
