@@ -5,27 +5,27 @@ export default class Content {
 
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
 		let mytuple = [10, "Hello", "World", "typeScript"]; 
-		res.write("Items before push " + mytuple.length);   // visszaadja a tuple méretét 
+		res.write("<p> Items before push " + mytuple.length+"</p>");   // visszaadja a tuple méretét 
 
 		mytuple.push(12);                                   // hozzáad egy értéket a tuplehoz
-		res.write("Items after push " + mytuple.length);
-		res.write("Items before pop " + mytuple.length);
-		res.write(mytuple.pop() + " popped from the tuple"); // kiszedi és visszadja az utolsó elemet
-		res.write("Items after pop " + mytuple.length);
+		res.write("<p> Items after push " + mytuple.length+"</p>");
+		res.write("<p> Items before pop " + mytuple.length+"</p>");
+		res.write("<p>"+"mytuple.pop() + " popped from the tuple </p>"); // kiszedi és visszadja az utolsó elemet
+		res.write("<p> Items after pop " + mytuple.length+"</p>");
 		// Tuplik frissitése
 		let mytuple2 = [10, "Hello", "World", "typeScript"]; // tuple létrehozása
-		res.write("Tuple value at index 0 " + mytuple[0]);
+		res.write("<p> Tuple value at index 0 " + mytuple[0]+"</p>");
 
 		// tuple 0. elemének megváltoztatása
 		mytuple[0] = 121;
-		res.write("Tuple value at index 0 changed to   " + mytuple[0]);
+		res.write("<p> Tuple value at index 0 changed to   " + mytuple[0]+"</p>");
 		// Üres tuple
 		let tup = [] ;
 		tup[0] = 12 ;
 		tup[1] = 23 ;
 
-		res.write(tup[0]) ;
-		res.write(tup[1]);
+		res.write("<p>"+tup[0]+"</p>") ;
+		res.write("<p>"+tup[1]+"</p>");
 
         
         res.write("<a href='https://github.com/zolleialex/tuple' target='_blank'>" +
