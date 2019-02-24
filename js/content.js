@@ -14,7 +14,7 @@ class Content {
 	res.write("<p>Hozzáadunk egy elemet: </p>");
 	var y;
 	for (y = 0; y < mytuple.length; y++) { 
-  		res.write(mytuple[i]+",");
+  		res.write(mytuple[y]+",");
 	}	    
 	res.write("<p>"+mytuple.pop()+" kitörölve a tupleból</p>"); // kiszedi és visszadja az utolsó elemet
 	res.write("<p>Elemek száma " + mytuple.length+"</p>");
