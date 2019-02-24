@@ -1,4 +1,3 @@
-﻿
 export default class Content {
 
     public content(req: http.IncomingMessage, res: http.ServerResponse): void {
