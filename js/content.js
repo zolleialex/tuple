@@ -17,7 +17,7 @@ class Content {
   		res.write(mytuple[y]+",");
 	}	    
 	res.write("<p>"+mytuple.pop()+" kitörölve a tupleból</p>"); // kiszedi és visszadja az utolsó elemet
-	res.write("<p>Elemek száma " + mytuple.length+"</p>");
+	res.write("<p>Elemek száma: " + mytuple.length+"</p>");
 	// Tuplik frissitése
 	res.write("<p>Tuple 0. elemének az értéke: " + mytuple[0]+"</p>");
 	// tuple 0. elemének megváltoztatása
