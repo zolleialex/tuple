@@ -3,7 +3,8 @@ export default class Content {
     public content(req: http.IncomingMessage, res: http.ServerResponse): void {
 
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-	let mytuple = [10, "Hello", "World", "typeScript"]; 
+	let mytuple : [number,string,string,string];
+	mytuple=[10, "Hello", "World", "typeScript"]; 
 	res.write("<p>Items before push: "+ mytuple.length+"</p>");   // visszaadja a tuple méretét 
 
 	mytuple.push(12);                                   // hozzáad egy értéket a tuplehoz
